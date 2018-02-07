@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Image, FlatList, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image, FlatList, TouchableOpacity, ScrollView } from 'react-native';
 import styles from './styles.js';
 
 export default class Post extends Component {
@@ -16,7 +16,7 @@ export default class Post extends Component {
 
     render() {
         return (
-            <View style={styles.PostContainer}>
+            <ScrollView style={styles.PostContainer}>
                 <View>
                     <Text style={styles.header}>{this.state.header}</Text>
                     <Image
@@ -25,7 +25,7 @@ export default class Post extends Component {
                     />
                 </View>
                 <View style={styles.interactButtons}>
-                    <TouchableOpacity onPress={() => { console.log('I was Pressed') }}>
+                    <TouchableOpacity style={styles.buttonsOpacity} onPress={() => { console.log('I was Pressed') }}>
                         <Text style={styles.button}>{'Like'}</Text>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() => { console.log('I was Pressed') }}>
@@ -35,17 +35,17 @@ export default class Post extends Component {
                         <Text style={styles.button}>{'Comment'}</Text>
                     </TouchableOpacity>
                 </View>
-                <View style={styles.comments}>
-                    <FlatList
+                
+                    <FlatList style={styles.InnerComments}
                         data={this.state.comments}
                         renderItem={({ item, index }) => {
                             return (
-                                <Text key={index} style={styles.comment}>{item.userName}{':  '}{item.comment}</Text>
+                                <Text key={item.id} style={styles.comment}>{item.userName}{':  '}{item.comment}</Text>
                             );
                         }}
                     />
-                </View>
-            </View>
+                
+            </ScrollView>
         );
     }
 

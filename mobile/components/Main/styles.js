@@ -2,8 +2,7 @@ import { StyleSheet, Text, View } from 'react-native';
 
 export default styles = StyleSheet.create({
     MainContainer: {
-        flex: 1,
-        flexDirection: 'column',
+        // flexDirection: 'column',
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'flex-start',
@@ -13,11 +12,32 @@ export default styles = StyleSheet.create({
     },
     division: {
         flexDirection: 'row',
-        height: '100%',
+        marginTop: 5,
+        marginBottom: 5,
+        justifyContent: 'space-between',
+        width: '90%',
     },
     bannerImage: {
-        width: 400,
-        height: '40%',
+        width: '100%',
+        height: 150,
         borderRadius: 12,
+    },
+    doubleImage: {
+        width: 180,
+        height: 150,
+        borderRadius: 12,
+    },
+    headerText: {
+        fontSize: 25,
+        paddingLeft: 10,
+        color: '#000000',
+        fontWeight: '900',
+    },
+    imageComments: {
+        width: '100%',
+        paddingLeft: 10,
+        alignItems: 'flex-start',
+        fontSize: 18,
+        color: '#000000',
     }
 });

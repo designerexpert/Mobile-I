@@ -2,20 +2,32 @@ import { StyleSheet, Text, View } from 'react-native';
 
 export default styles = StyleSheet.create({
     PostContainer: {
-        flex: 1,
         backgroundColor: '#fff',
         alignItems: 'center',
-        // justifyContent: 'center',
-        marginTop: 33,
+        justifyContent: 'flex-start',
         width: '100%',
-        height: '100%'
+        height: 'auto',
+    },
+    header: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        alignItems: 'center',
+        height: '12%',
     },
     interactButtons: {
+        width: 'auto',
+        height: '12%',
         justifyContent: 'center',
+        // alignItems: 'center',
         flexDirection: 'row',
-        width: '80%',
-        marginBottom: 10,
-        marginTop: 10,
+    },
+    buttonsOpacity: {
+    },
+    postImage: {
+        width: 'auto',
+        height: 200,
+        borderRadius: 10,
     },
     button: {
         marginLeft: 2,
@@ -24,20 +36,26 @@ export default styles = StyleSheet.create({
         color: 'white',
         paddingLeft: 10,
         paddingRight: 10,
-        paddingTop: 8,
-        paddingBottom: 8,
+        paddingTop: 2,
+        paddingBottom: 2,
         borderRadius: 4,
     },
     comments: {
-        width: '90%',
+        marginTop: 5,
+        width: 'auto',
+        height: 200,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
-    header: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        textAlign: 'center',
-        marginBottom: 5,
+    InnerComments: {
+        flex: 1,
+        width: 'auto',
+        height: 250,
+        justifyContent: 'flex-start',
+        alignItems: 'center',
     },
     comment: {
+        width: '100%',
         borderWidth: 1,
         borderColor: '#3b5998',
         paddingLeft: 10,
@@ -45,9 +63,4 @@ export default styles = StyleSheet.create({
         paddingTop: 4,
         paddingBottom: 4,
     },
-    postImage: {
-        width: 400,
-        height: 400,
-        borderRadius: 10,
-    }
 });
